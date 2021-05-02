@@ -1,0 +1,34 @@
+{
+	"simpleTypes": ["TimePeriod", "Money", "Quantity", "Tax", 
+					"Value", "Any", "object", "Number", "Date", "SomeTest2"],
+	
+	"simpleEndings": ["Type", "Error"],
+    
+	"nonSimpleEndings": ["RefType", "TypeRef", "RoleType"],
+	
+	"puml": [
+			"@startuml",
+			"hide circle",
+			"hide methods",
+			"hide stereotype",
+			"show <<Enumeration>> stereotype",
+			"skinparam class {",
+			"   BackgroundColor<<Enumeration>> #E6F5F7",
+			"   BackgroundColor<<Ref>> #FFFFE0",
+			"   BackgroundColor<<Pivot>> #FFFFFFF",
+			"   BackgroundColor #FCF2E3",
+			"}",
+			""	
+	],
+	
+	"showDefaultCardinality": false,
+	
+	"defaultCardinality": "0..1",
+	
+	"requiredHighlighting": "<b>%s</b>",
+	
+	"includeDescription": false,
+	
+	"showCardinalitySimpleProperties": false
+		
+}
