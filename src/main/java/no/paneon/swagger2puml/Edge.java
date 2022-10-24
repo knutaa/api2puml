@@ -20,6 +20,10 @@ public class Edge {
 		this.related=related;
 		this.cardinality=cardinality;
 		this.required=required;
+		 
+		String t = node + "-" + related + "-" + relation + "-" + cardinality;
+		System.out.println("Edge:: " + t);
+		
 	}
 	
 	String getID() {

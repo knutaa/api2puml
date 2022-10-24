@@ -562,7 +562,17 @@ public class Config {
 	}
 
 	public boolean hideCardinaltyForProperty(String cardinality) {
-		return !getBoolean("showCardinalitySimpleProperties");
+		boolean res = getBoolean("showCardinalitySimpleProperties");
+		
+		if(!res) return !res;
+		
+		// System.out.println("hideCardinaltyForProperty: card=" + cardinality);
+		
+		res=false;
+		
+		if(cardinality.contentEquals("0..1")) res=true;
+
+		return res;
 	}
 
 	public JSONObject getBaseTypes() {

@@ -29,6 +29,6 @@
 	
 	"includeDescription": false,
 	
-	"showCardinalitySimpleProperties": false
+	"showCardinalitySimpleProperties": true
 		
 }

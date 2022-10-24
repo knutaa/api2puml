@@ -66,7 +66,14 @@ public class ClassProperty extends Entity {
 					res = name + " : " + type;
 			}
 			
-			if(!cardinality.isEmpty() && !CONFIG.hideCardinaltyForProperty(cardinality)) res = res + " [" + cardinality + "]";
+			// System.out.println("ClassProperty:: name=" + name + " card=" + cardinality);
+			
+			if(cardinality.contentEquals("1")) {
+				res = res + " (1)";
+				res = "{field}" + res;
+			} else if(!cardinality.isEmpty() && !CONFIG.hideCardinaltyForProperty(cardinality)) {
+				res = res + " [" + cardinality + "]";
+			}
 			
 			return res;
 		}

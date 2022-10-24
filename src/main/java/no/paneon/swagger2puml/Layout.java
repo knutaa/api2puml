@@ -25,6 +25,7 @@ import no.paneon.puml.EnumEntity;
 import no.paneon.puml.HiddenEdge;
 import no.paneon.swagger2puml.Graph.GraphNode;
 
+
 public class Layout {
 
 	private static Logger LOG = Logger.getLogger(Layout.class);
@@ -56,6 +57,9 @@ public class Layout {
 		// graph.graphNodes.get(node).properties.keySet().forEach(prop -> {
 		gnode.properties.forEach(prop -> {
 			LOG.debug("generateUMLClasses: node=" + node + " prop=" + prop);
+			
+			// System.out.println("generateUMLClasses: node=" + node + " prop=" + prop.getName() + " card=" + prop.getCardinality());
+
 			String type =  prop.getType();
 			if(Utils.isEnumType(swagger, type) && presentEnumForNode(resource,node)) {
 				generateForEnum(cls, node, type);

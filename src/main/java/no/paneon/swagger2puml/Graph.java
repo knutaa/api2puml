@@ -228,6 +228,9 @@ public class Graph {
 	            cardinality=Integer.toString(min) +  ".." + max;
 	            
 		    	String type = Utils.type(item,null);
+		    	
+		    	// System.out.println("addProperty:: " + type + " cardinailty=" + cardinality);
+		    	
 	            addProperty(resource, p, type, cardinality, isRequired);
 				
 	        } else if(property.has("type")) {
